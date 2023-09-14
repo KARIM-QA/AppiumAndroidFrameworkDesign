@@ -1,0 +1,5 @@
+# Created at 2023-09-13T17:57:42.238
+Boot Manifest-JAR contains absolute paths in classpath 'K:\Appium\Appium_Eclipse_Project\AppiumAndroidFrameworkDesign\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

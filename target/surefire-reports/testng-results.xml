@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="5" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-09-14T10:57:33 BST" name="Suite" finished-at="2023-09-14T10:59:32 BST" duration-ms="119314">
+    <groups>
+      <group name="smoke">
+        <method signature="Hybrid_Validate_Total_Amount_Steps.Validate_Total_AmountTest(java.util.HashMap)[pri:0, instance:testcases.Hybrid_Validate_Total_Amount_Steps@48e92c5c]" name="Validate_Total_AmountTest" class="testcases.Hybrid_Validate_Total_Amount_Steps"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test started-at="2023-09-14T10:57:33 BST" name="End To End Framework Test" finished-at="2023-09-14T10:59:31 BST" duration-ms="118766">
+      <class name="testcases.Hybrid_Validate_Total_Amount_Steps">
+        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:testcases.Hybrid_Validate_Total_Amount_Steps@48e92c5c]" started-at="2023-09-14T10:57:33 BST" name="ConfigureAppium" finished-at="2023-09-14T10:57:43 BST" duration-ms="10638" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ConfigureAppium -->
+        <test-method signature="Validate_Total_AmountTest(java.util.HashMap)[pri:0, instance:testcases.Hybrid_Validate_Total_Amount_Steps@48e92c5c]" started-at="2023-09-14T10:57:44 BST" name="Validate_Total_AmountTest" data-provider="getData" finished-at="2023-09-14T10:58:26 BST" duration-ms="42955" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{name=Karim Laribi, country=Belgium, gender=male}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Validate_Total_AmountTest -->
+        <test-method signature="Validate_Total_AmountTest(java.util.HashMap)[pri:0, instance:testcases.Hybrid_Validate_Total_Amount_Steps@48e92c5c]" started-at="2023-09-14T10:58:27 BST" name="Validate_Total_AmountTest" data-provider="getData" finished-at="2023-09-14T10:59:01 BST" duration-ms="34719" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{name=Sarah Conor, country=Australia, gender=female}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Validate_Total_AmountTest -->
+        <test-method signature="Validate_Total_AmountTest(java.util.HashMap)[pri:0, instance:testcases.Hybrid_Validate_Total_Amount_Steps@48e92c5c]" started-at="2023-09-14T10:59:01 BST" name="Validate_Total_AmountTest" data-provider="getData" finished-at="2023-09-14T10:59:31 BST" duration-ms="29373" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{name=Cintia Crowford, country=Angola, gender=female}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Validate_Total_AmountTest -->
+        <test-method is-config="true" signature="teardownAppium()[pri:0, instance:testcases.Hybrid_Validate_Total_Amount_Steps@48e92c5c]" started-at="2023-09-14T10:59:31 BST" name="teardownAppium" finished-at="2023-09-14T10:59:31 BST" duration-ms="827" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardownAppium -->
+      </class> <!-- testcases.Hybrid_Validate_Total_Amount_Steps -->
+    </test> <!-- End To End Framework Test -->
+    <test started-at="2023-09-14T10:59:32 BST" name="Error Validation Test" finished-at="2023-09-14T10:59:32 BST" duration-ms="0">
+    </test> <!-- Error Validation Test -->
+  </suite> <!-- Suite -->
+</testng-results>

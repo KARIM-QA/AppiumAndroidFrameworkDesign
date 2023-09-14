@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<groups>
+	
+	  <run>
+	<include name="smoke"></include>
+	   </run>
+	   
+	</groups>
+	<listeners>
+		<listener class-name="testUtils.Listeners"></listener>
+	</listeners>
+
+	<test thread-count="5" name="End To End Framework Test">
+		<classes>
+			<class name="testcases.Hybrid_Validate_Total_Amount_Steps" />
+		</classes>
+	</test> <!-- Test -->
+
+	<test thread-count="5" name="Error Validation Test">
+		<classes>
+			<class name="testcases.FillForm_Validation" />
+		</classes>
+	</test> <!-- Test -->
+
+</suite> <!-- Suite -->

@@ -16,6 +16,7 @@ import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import pageObjects.android.CartPage;
 import pageObjects.android.ProductCataloguePage;
+import testUtils.AndroidBaseTest;
 import utilities.AndroidActions;
 import utilities.AppiumUtils;
 
@@ -24,15 +25,15 @@ public class Hybrid_Validate_Total_Amount_Steps extends AndroidBaseTest {
 	
 	
 
-	@Test(dataProvider="getData")
+	@Test(dataProvider="getData",groups={"smoke"})
 	public void Validate_Total_AmountTest(HashMap<String,String> inputData) throws InterruptedException {
 		
 		/**************************First page Formulaire to fill************************************************************/
 		
-		 AndroidActions androidActions = new AndroidActions(driver);
+		 AndroidActions androidActions = new AndroidActions(androidDriver);
 		 AppiumUtils appiumUtils = new AppiumUtils();
 		 
-		 //on peut initier  l'objet formulairePage dans BaseDesignTest car c'est la première page à executer (optimisation)
+		 //on peut initier  l'objet formulairePage dans AndroidBaseTest car c'est la première page à executer (optimisation)
 		 //FormulairePage formulairePage = new FormulairePage(driver) ;
 		 formulairePage.SetCountryName(inputData.get("country"));
 		 formulairePage.SetNameField(inputData.get("name"));
@@ -59,7 +60,7 @@ public class Hybrid_Validate_Total_Amount_Steps extends AndroidBaseTest {
 		 /**************************Third page Cart page******************************************************************/
 	
 	    //explicit wait until Cart page is loaded totally
-	     appiumUtils.waitElementToBeDisplayed(driver,driver.findElement(By.id("com.androidsample.generalstore:id/toolbar_title")), "text", "Cart") ;
+	     appiumUtils.waitElementToBeDisplayed(androidDriver,androidDriver.findElement(By.id("com.androidsample.generalstore:id/toolbar_title")), "text", "Cart") ;
 	     
 	
 	     double calculatedTotalSum =cartPage.getCalculatedSumProduct();
@@ -77,7 +78,7 @@ public class Hybrid_Validate_Total_Amount_Steps extends AndroidBaseTest {
 		
 		/******************************************Hybrid Automation*******************************************************************/
 		// list collection of contexts
-		Set <String> contexts= driver.getContextHandles();
+		Set <String> contexts= androidDriver.getContextHandles();
 		
 	   // display contexts using loop
 		for(String contextName :contexts) {
@@ -86,13 +87,13 @@ public class Hybrid_Validate_Total_Amount_Steps extends AndroidBaseTest {
 		}
 		
 		//switch vers web application, be careful context name like  Webview can be different depending on the developpers specifications
-		 driver.context("WEBVIEW_com.androidsample.generalstore");
+		androidDriver.context("WEBVIEW_com.androidsample.generalstore");
 		 // redirection vers google.com
-		 driver.findElement(By.name("q")).sendKeys("Kimmich Foundation");
-		 driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
+		androidDriver.findElement(By.name("q")).sendKeys("Kimmich Foundation");
+		androidDriver.findElement(By.name("q")).sendKeys(Keys.ENTER);
 		 //retour au contexte native 
-		 driver.context("NATIVE_APP");
-		 driver.pressKey(new KeyEvent(AndroidKey.BACK));
+		androidDriver.context("NATIVE_APP");
+		androidDriver.pressKey(new KeyEvent(AndroidKey.BACK));
 		 
 		
 	}

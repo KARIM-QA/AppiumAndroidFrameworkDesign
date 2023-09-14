@@ -8,13 +8,18 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">134.702</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">End To End Framework Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">15</td><td>regression</td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Error Validation Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">53.962</td><td>regression</td><td></td></tr>
+<tr><th>Total</th><th class="num">1</th><th class="num">0</th><th class="num">0</th><th class="num attn">1</th><th class="num">53.977</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">testcases.Hybrid_Validate_Total_Amount_Steps</td><td><a href="#m0">Validate_Total_AmountTest</a></td><td rowspan="3">1694562695099</td><td rowspan="3">41570</td></tr><tr class="passedeven"><td><a href="#m1">Validate_Total_AmountTest</a></td></tr><tr class="passedeven"><td><a href="#m2">Validate_Total_AmountTest</a></td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4" class="invisible"/></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Error Validation Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testcases.FillForm_Validation</td><td><a href="#m0">FillForm_NegativeTest</a></td><td rowspan="1">1694620810910</td><td rowspan="1">16603</td></tr><tr><th colspan="4">Error Validation Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testcases.FillForm_Validation</td><td><a href="#m1">FillForm_PositiveTest</a></td><td rowspan="1">1694620828743</td><td rowspan="1">25616</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">testcases.Hybrid_Validate_Total_Amount_Steps#Validate_Total_AmountTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{name=Sarah Conor, country=Australia, gender=female}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">testcases.Hybrid_Validate_Total_Amount_Steps#Validate_Total_AmountTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{name=Cintia Crowford, country=Angola, gender=female}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">testcases.Hybrid_Validate_Total_Amount_Steps#Validate_Total_AmountTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{name=Karim Laribi, country=Belgium, gender=male}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>End To End Framework Test</h2><h2>Error Validation Test</h2><h3 id="m0">testcases.FillForm_Validation#FillForm_NegativeTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Please enter your name1] but found [Please enter your name]
+	at testcases.FillForm_Validation.FillForm_NegativeTest(FillForm_Validation.java:87)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testcases.FillForm_Validation#FillForm_PositiveTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
